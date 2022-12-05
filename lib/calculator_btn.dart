@@ -4,13 +4,23 @@ import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
   final String text;
-  const CalculatorButton({required this.text, super.key});
+  final int fillColor;
+  final int textColor;
+  final double textSize;
+  final Function callback;
+  const CalculatorButton(
+      {required this.text,
+      required this.fillColor,
+      required this.textColor,
+      required this.textSize,
+      required this.callback,
+      super.key});
 
   @override
   Widget build(BuildContext context) {
     final ButtonStyle flatButtonStyle = TextButton.styleFrom(
       minimumSize: Size(70, 70),
-      backgroundColor: Color(0xFF8ac4d0),
+      backgroundColor: Color(fillColor),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
     );
     return Container(
@@ -21,9 +31,11 @@ class CalculatorButton extends StatelessWidget {
         height: 70,
         child: TextButton(
             style: flatButtonStyle,
-            onPressed: () {},
-            child:
-                Text(text, style: TextStyle(color: Colors.white, fontSize: 24))),
+            onPressed: () {
+              callback;
+            },
+            child: Text(text,
+                style: TextStyle(color: Color(textColor), fontSize: textSize))),
       ),
     );
   }
