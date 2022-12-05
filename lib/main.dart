@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     } else if (buttonValue == "+" ||
         buttonValue == "-" ||
         buttonValue == "/" ||
-        buttonValue == "X") {
+        buttonValue == "x") {
       firstNumber = int.parse(textToDisplay);
       results = "";
       operation = buttonValue;
@@ -47,16 +47,16 @@ class _MyAppState extends State<MyApp> {
       secondNumber = int.parse(textToDisplay);
       if (operation == "+") {
         results = (firstNumber + secondNumber).toString();
-        history = firstNumber.toString() + secondNumber.toString();
+        history = firstNumber.toString() + operation + secondNumber.toString();
       } else if (operation == "-") {
         results = (firstNumber - secondNumber).toString();
-        history = firstNumber.toString() + secondNumber.toString();
+        history = firstNumber.toString() + operation + secondNumber.toString();
       } else if (operation == "/") {
         results = (firstNumber / secondNumber).toString();
-        history = firstNumber.toString() + secondNumber.toString();
-      } else if (operation == "X") {
+        history = firstNumber.toString() + operation + secondNumber.toString();
+      } else if (operation == "x") {
         results = (firstNumber * secondNumber).toString();
-        history = firstNumber.toString() + secondNumber.toString();
+        history = firstNumber.toString() + operation + secondNumber.toString();
       }
     } else {
       results = int.parse(textToDisplay + buttonValue).toString();
@@ -92,7 +92,6 @@ class _MyAppState extends State<MyApp> {
                 padding: EdgeInsets.all(12),
                 child: Text(
                   history,
-                  textAlign: TextAlign.end,
                   style: TextStyle(
                     fontSize: 25,
                     color: Color(0xFF22E2FF),
@@ -106,7 +105,6 @@ class _MyAppState extends State<MyApp> {
                 padding: EdgeInsets.all(12),
                 child: Text(
                   textToDisplay,
-                  textAlign: TextAlign.end,
                   style: TextStyle(
                     fontSize: 48,
                     color: Colors.white,
@@ -171,7 +169,7 @@ class _MyAppState extends State<MyApp> {
                     textSize: 20,
                     callback: btnOnClick),
                 CalculatorButton(
-                    text: "X",
+                    text: "x",
                     fillColor: 0xFFf4d160,
                     textColor: 0xFFFFFFFF,
                     textSize: 20,

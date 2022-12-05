@@ -32,7 +32,7 @@ class CalculatorButton extends StatelessWidget {
         child: TextButton(
             style: flatButtonStyle,
             onPressed: () {
-              callback;
+              callback(text);
             },
             child: Text(text,
                 style: TextStyle(color: Color(textColor), fontSize: textSize))),
