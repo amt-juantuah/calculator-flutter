@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'calculator_btn.dart';
  
 void main() => runApp(
   DevicePreview(
@@ -16,11 +17,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle flatButtonStyle = TextButton.styleFrom(
-      minimumSize: Size(70, 70),
-      backgroundColor: Colors.grey,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-    );
     return MaterialApp(
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
@@ -35,29 +31,22 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Container(
           child: Column(
+            // To let buttons appear at the bottom
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Row(
                 children: [
-                  Container(
-                    child: SizedBox(
-                      width: 70,
-                      height: 70,
-                      child: TextButton(
-                        style: flatButtonStyle,
-                        onPressed: () {},
-                        child: Text(
-                          "9",
-                          style: TextStyle(color: Colors.white)
-                        )
-                      ),
-                    ),
-                  )
+                  CalculatorButton();
+                  CalculatorButton();
+                  CalculatorButton();
+                  CalculatorButton();
                 ],
-              )
+              ),
+              
             ],
             )
           ),
-        backgroundColor: Color(0xFF000000),
+        backgroundColor: Color(0xff28527a),
       ),
     ); // MaterialApp
   }
