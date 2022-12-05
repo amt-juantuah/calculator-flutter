@@ -35,11 +35,48 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CalculatorButton();
-                  CalculatorButton();
-                  CalculatorButton();
-                  CalculatorButton();
+                  CalculatorButton(text: "0"),
+                  CalculatorButton(text: "1"),
+                  CalculatorButton(text: "2"),
+                  CalculatorButton(text: "3"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CalculatorButton(text: "0"),
+                  CalculatorButton(text: "1"),
+                  CalculatorButton(text: "2"),
+                  CalculatorButton(text: "3"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CalculatorButton(text: "0"),
+                  CalculatorButton(text: "1"),
+                  CalculatorButton(text: "2"),
+                  CalculatorButton(text: "3"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CalculatorButton(text: "0"),
+                  CalculatorButton(text: "1"),
+                  CalculatorButton(text: "2"),
+                  CalculatorButton(text: "3"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CalculatorButton(text: "0"),
+                  CalculatorButton(text: "1"),
+                  CalculatorButton(text: "2"),
+                  CalculatorButton(text: "3"),
                 ],
               ),
               

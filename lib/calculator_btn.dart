@@ -3,7 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
-  const CalculatorButton({super.key});
+  final String text;
+  const CalculatorButton({required this.text, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class CalculatorButton extends StatelessWidget {
             style: flatButtonStyle,
             onPressed: () {},
             child:
-                Text("9", style: TextStyle(color: Colors.white, fontSize: 24))),
+                Text(text, style: TextStyle(color: Colors.white, fontSize: 24))),
       ),
     );
   }
